@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:maoulaoui/screens/homescreen/homescreen.dart';
 import 'package:maoulaoui/screens/accountscreen/accountscreen.dart';
 import 'package:maoulaoui/screens/bookingscreen/bookingscreen.dart';
-import 'package:maoulaoui/screens/searchscreen/searchscreen.dart';
+
+import 'package:maoulaoui/screens/settingsscreen/settingsscreen.dart';
 
 class Bottomnavbarscreen extends StatefulWidget {
   static const String route = "/BottomNavBarScreen";
@@ -14,7 +15,7 @@ class Bottomnavbarscreen extends StatefulWidget {
 final List<Widget> _pages = [
   AccountScreen(),
   BookingScreen(),
-  SearchScreen(),
+  SettingsScreen(),
   Homescreen(),
 ];
 
@@ -29,6 +30,7 @@ class _BottomnavbarscreenState extends State<Bottomnavbarscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         fixedColor: const Color(0xFFD3AF37),
@@ -43,7 +45,10 @@ class _BottomnavbarscreenState extends State<Bottomnavbarscreen> {
             icon: Icon(Icons.airplane_ticket_outlined),
             label: 'Bookings',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
 
           BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Home'),
         ],

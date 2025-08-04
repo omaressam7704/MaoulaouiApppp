@@ -5,6 +5,11 @@ class BookingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Booking Screen'));
+    return Center(
+      child: Text(
+        'Booking Screen',
+        style: TextStyle(fontSize: 24, color: Colors.black),
+      ),
+    );
   }
 }

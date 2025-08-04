@@ -26,6 +26,7 @@ class _OfferscardState extends State<Offerscard> {
       children: [
         CarouselSlider(
           options: CarouselOptions(
+            viewportFraction: 0.95,
             autoPlay: true,
             aspectRatio: 2.0,
             enableInfiniteScroll: false,
@@ -44,7 +45,7 @@ class _OfferscardState extends State<Offerscard> {
           effect: ExpandingDotsEffect(
             dotWidth: 8.0.w,
             dotHeight: 8.0.h,
-            activeDotColor: Color.fromARGB(255, 0, 121, 108),
+            activeDotColor: Color(0xFFD3AF37),
             dotColor: Color.fromARGB(51, 99, 110, 114),
           ),
         ),

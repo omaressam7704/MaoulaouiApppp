@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:maoulaoui/screens/splashscreen/splashscreen.dart';
 import 'package:maoulaoui/screens/onboardingscreen/onboardingscreen.dart';
 import 'package:maoulaoui/screens/loginscreen/loginscreen.dart';
-import 'package:maoulaoui/screens/loginscreen/sign_in_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +26,6 @@ class MyApp extends StatelessWidget {
             SplashScreen.route: (context) => const SplashScreen(),
             OnboardingScreen.route: (context) => const OnboardingScreen(),
             Loginscreen.route: (context) => const Loginscreen(),
-            SignInScreen.route: (context) => const SignInScreen(),
             Bottomnavbarscreen.route: (context) => const Bottomnavbarscreen(),
           },
           debugShowCheckedModeBanner: false,
