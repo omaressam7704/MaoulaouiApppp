@@ -17,18 +17,6 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-            icon: Icon(Icons.arrow_forward_ios_outlined),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ],
-
-        automaticallyImplyLeading: false,
-      ),
       body: Container(
         width: 390.w,
         height: 844.h,

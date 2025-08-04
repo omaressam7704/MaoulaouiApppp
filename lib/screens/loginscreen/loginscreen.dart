@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:maoulaoui/screens/bottomnavbar/bottomnavbarscreen.dart';
 import 'package:maoulaoui/shared/resources/asset_manager.dart';
+import 'package:maoulaoui/screens/loginscreen/sign_in_screen.dart';
+import 'package:maoulaoui/screens/homescreen/widgets/button.dart';
 
 class Loginscreen extends StatelessWidget {
   static const String route = '/login';
@@ -39,46 +40,25 @@ class Loginscreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
 
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFFD4AF37), // Gold
-                  foregroundColor: Colors.white,
-                  padding: EdgeInsets.symmetric(vertical: 16),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                ),
-                child: Text('تسجيل الدخول', style: TextStyle(fontSize: 16)),
-              ),
+            Button(
+              text: 'تسجيل الدخول',
+              onPressed: SignInScreen.route,
+              backgroundColor: Color(0xFFD3AF37), // Gold
+              textColor: Colors.white,
+              borderColor: Color(0xFFD3AF37), // Gold
             ),
             SizedBox(height: 12),
 
-            SizedBox(
-              width: double.infinity,
-              child: OutlinedButton(
-                onPressed: () {},
-                style: OutlinedButton.styleFrom(
-                  side: BorderSide(color: Color(0xFFD4AF37), width: 2),
-                  foregroundColor: Color(0xFFD4AF37), // Text color
-                  backgroundColor: Colors.white,
-                  padding: EdgeInsets.symmetric(vertical: 16),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                ),
-                child: Text('الاشتراك', style: TextStyle(fontSize: 16)),
-              ),
+            Button(
+              text: 'الاشتراك',
+              onPressed: SignInScreen.route,
+              backgroundColor: Colors.white,
+              textColor: Color(0xFFD3AF37),
+              borderColor: Color(0xFFD3AF37), // Gold
             ),
             SizedBox(height: 20),
             InkWell(
-              onTap: () {
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (_) => const Bottomnavbarscreen()),
-                );
-              },
+              onTap: () {},
               child: Text(
                 'التخطي للصفحة الرئيسية',
                 style: TextStyle(fontSize: 16, color: Colors.grey),
